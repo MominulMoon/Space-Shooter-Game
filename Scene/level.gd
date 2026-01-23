@@ -5,4 +5,4 @@ func _ready():
 
 func _on_timer_timeout() -> void:
 	var meteor =meteor_scene.instantiate()
-	add_child(meteor)
+	$Meteors.add_child(meteor)

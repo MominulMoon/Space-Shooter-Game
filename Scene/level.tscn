@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cccjwmm55pk0f"]
+[gd_scene load_steps=6 format=3 uid="uid://cccjwmm55pk0f"]
 
 [ext_resource type="Texture2D" uid="uid://cu7o1lmseq8p1" path="res://Assets/Backgrounds/darkPurple.png" id="1_3bu56"]
 [ext_resource type="Script" uid="uid://cq2y52l60q24c" path="res://Scene/level.gd" id="1_or6n4"]
 [ext_resource type="PackedScene" uid="uid://5fth64j11sbg" path="res://Scene/palyer.tscn" id="2_jnrmd"]
-[ext_resource type="PackedScene" uid="uid://iyxf68ykl2o" path="res://Scene/meteor.tscn" id="2_or6n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnrmd"]
 size = Vector2(106, 726)
@@ -22,30 +21,31 @@ texture = ExtResource("1_3bu56")
 [node name="Palyer" parent="." instance=ExtResource("2_jnrmd")]
 position = Vector2(635, 678)
 
-[node name="Meteor" parent="." instance=ExtResource("2_or6n4")]
-position = Vector2(562, 366)
-
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
 position = Vector2(1328, 363)
 shape = SubResource("RectangleShape2D_jnrmd")
 
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(646, -12)
+shape = SubResource("RectangleShape2D_or6n4")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
 position = Vector2(-55, 363)
 shape = SubResource("RectangleShape2D_jnrmd")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Borders/StaticBody2D3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3/StaticBody2D2"]
-position = Vector2(646, -12)
-shape = SubResource("RectangleShape2D_or6n4")
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
 position = Vector2(646, 732)
@@ -53,5 +53,8 @@ shape = SubResource("RectangleShape2D_or6n4")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
+wait_time = 0.2
+
+[node name="Meteors" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
