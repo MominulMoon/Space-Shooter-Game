@@ -1,8 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://cccjwmm55pk0f"]
+[gd_scene load_steps=10 format=3 uid="uid://cccjwmm55pk0f"]
 
 [ext_resource type="Texture2D" uid="uid://cu7o1lmseq8p1" path="res://Assets/Backgrounds/darkPurple.png" id="1_3bu56"]
 [ext_resource type="Script" uid="uid://cq2y52l60q24c" path="res://Scene/level.gd" id="1_or6n4"]
 [ext_resource type="PackedScene" uid="uid://5fth64j11sbg" path="res://Scene/palyer.tscn" id="2_jnrmd"]
+[ext_resource type="Texture2D" uid="uid://r7vfar4rx8yc" path="res://Assets/PNG/Effects/star1.png" id="4_p7rx0"]
+[ext_resource type="Texture2D" uid="uid://bcwg50yi1p5yp" path="res://Assets/PNG/Effects/star2.png" id="5_iysjp"]
+[ext_resource type="Texture2D" uid="uid://n08lhomyesbd" path="res://Assets/PNG/Effects/star3.png" id="6_hdt71"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_637vb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_p7rx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_iysjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hdt71")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnrmd"]
 size = Vector2(106, 726)
@@ -17,6 +37,136 @@ script = ExtResource("1_or6n4")
 position = Vector2(643, 302)
 scale = Vector2(5.6972656, 3.3144534)
 texture = ExtResource("1_3bu56")
+
+[node name="Stars" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
+
+[node name="AnimatedSprite2D16" type="AnimatedSprite2D" parent="Stars"]
+self_modulate = Color(0.917451, 0.73442316, 0.9938372, 0.45882353)
+position = Vector2(1.0000005, 1)
+scale = Vector2(1.04, 1.0833334)
+sprite_frames = SubResource("SpriteFrames_637vb")
+autoplay = "default"
+frame_progress = 0.30575225
 
 [node name="Palyer" parent="." instance=ExtResource("2_jnrmd")]
 position = Vector2(635, 678)
