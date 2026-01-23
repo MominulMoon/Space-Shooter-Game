@@ -12,3 +12,6 @@ texture = ExtResource("1_w53dl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-1, -38, 8, -38, 13, -13, 34, 1, 48, -7, 47, 23, 14, 27, 6, 37, -9, 38, -15, 28, -46, 21, -49, -8, -37, 3, -12, -13, -8, -38)
+
+[node name="LaserStartingPosition" type="Marker2D" parent="."]
+position = Vector2(1, -53)

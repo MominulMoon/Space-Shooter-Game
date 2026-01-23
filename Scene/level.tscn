@@ -14,12 +14,16 @@ size = Vector2(1538, 26)
 script = ExtResource("1_or6n4")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(645.75, 359.75)
+position = Vector2(643, 302)
 scale = Vector2(5.6972656, 3.3144534)
 texture = ExtResource("1_3bu56")
 
 [node name="Palyer" parent="." instance=ExtResource("2_jnrmd")]
 position = Vector2(635, 678)
+
+[node name="LaserCooldown" type="Timer" parent="Palyer"]
+process_callback = 0
+wait_time = 0.5
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -57,4 +61,8 @@ wait_time = 0.2
 
 [node name="Meteors" type="Node2D" parent="."]
 
+[node name="Laser" type="Node2D" parent="."]
+
+[connection signal="laser" from="Palyer" to="." method="_on_palyer_laser"]
+[connection signal="timeout" from="Palyer/LaserCooldown" to="Palyer" method="_on_laser_cooldown_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
